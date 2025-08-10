@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A comprehensive HTML5 page showcasing lists, tables, media, and a fully featured form with validation.">
+  <title>HTML5 Content & Forms Showcase</title>
+</head>
+<body>
+
+  <header>
+    <h1>HTML5 Content & Forms Showcase</h1>
+    <nav aria-label="Main Navigation">
+      <ul>
+        <li><a href="#features">Page Features</a></li>
+        <li><a href="#media">Multimedia Content</a></li>
+        <li><a href="#form-section">User Registration Form</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Feature Lists and Tables -->
+    <section id="features" aria-labelledby="features-heading">
+      <h2 id="features-heading">Organizing Information with Lists and Tables</h2>
+
+      <article>
+        <h3>Top HTML5 Features</h3>
+        <p>HTML5 introduces a range of powerful features for modern web development. Some key capabilities include:</p>
+        <ul>
+          <li>Semantic elements like <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code></li>
+          <li>Native audio and video embedding without plugins</li>
+          <li>Form enhancements with built-in validation</li>
+          <li>Offline capabilities and local storage</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>HTML5 Feature Comparison Table</h3>
+        <table border="1" aria-label="HTML5 feature comparison">
+          <caption>Comparison of Select HTML5 Features</caption>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Supported Element</th>
+              <th>Accessibility Impact</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Multimedia</td>
+              <td>&lt;video&gt;, &lt;audio&gt;</td>
+              <td>Improves content inclusion for all users</td>
+            </tr>
+            <tr>
+              <td>Forms</td>
+              <td>&lt;input&gt;, &lt;select&gt;, &lt;textarea&gt;</td>
+              <td>Reduces need for scripts, improves form usability</td>
+            </tr>
+            <tr>
+              <td>Structure</td>
+              <td>&lt;section&gt;, &lt;article&gt;, &lt;aside&gt;</td>
+              <td>Enhances screen reader navigation</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    </section>
+
+    <!-- Multimedia Content Section -->
+    <section id="media" aria-labelledby="media-heading">
+      <h2 id="media-heading">Multimedia Elements</h2>
+
+      <article>
+        <h3>Embedded Video</h3>
+        <p>Learn HTML5 with this helpful video overview:</p>
+        <video controls width="480" aria-label="Introductory HTML5 Video">
+          <source src="html5-intro.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </article>
+
+      <article>
+        <h3>Audio Example</h3>
+        <p>Listen to an audio tutorial on web forms:</p>
+        <audio controls aria-label="HTML5 Forms Audio Tutorial">
+          <source src="html5-forms.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </article>
+
+      <article>
+        <h3>Image with Alternative Text</h3>
+        <p>An example of a well-labeled image:</p>
+        <img src="html5-logo.png" alt="HTML5 logo in orange shield" width="150">
+      </article>
+    </section>
+
+    <!-- Form Section -->
+    <section id="form-section" aria-labelledby="form-heading">
+      <h2 id="form-heading">User Registration Form</h2>
+
+      <p>Fill in the form below to register. All fields marked with * are required.</p>
+
+      <form action="/submit-form" method="post" autocomplete="on">
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <label for="fullname">Full Name *</label><br>
+          <input type="text" id="fullname" name="fullname" required minlength="3" placeholder="Jane Doe"><br><br>
+
+          <label for="email">Email Address *</label><br>
+          <input type="email" id="email" name="email" required placeholder="example@mail.com"><br><br>
+
+          <label for="age">Age</label><br>
+          <input type="number" id="age" name="age" min="18" max="100" placeholder="18"><br><br>
+
+          <label for="dob">Date of Birth *</label><br>
+          <input type="date" id="dob" name="dob" required><br><br>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Account Preferences</legend>
+
+          <label for="username">Username *</label><br>
+          <input type="text" id="username" name="username" required pattern="[A-Za-z0-9]{5,15}" placeholder="5–15 letters/numbers"><br><br>
+
+          <label for="password">Password *</label><br>
+          <input type="password" id="password" name="password" required minlength="8" placeholder="At least 8 characters"><br><br>
+
+          <label for="color">Favorite Color</label><br>
+          <input type="color" id="color" name="color" value="#ff6600"><br><br>
+
+          <label for="bio">Short Bio</label><br>
+          <textarea id="bio" name="bio" rows="4" cols="40" maxlength="250" placeholder="Tell us something about yourself..."></textarea><br><br>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Subscription</legend>
+
+          <label for="newsletter">Subscribe to newsletter?</label><br>
+          <input type="checkbox" id="newsletter" name="newsletter" checked><br><br>
+
+          <label>Preferred Contact Method:</label><br>
+          <input type="radio" id="contact-email" name="contact" value="email" checked>
+          <label for="contact-email">Email</label><br>
+
+          <input type="radio" id="contact-phone" name="contact" value="phone">
+          <label for="contact-phone">Phone</label><br><br>
+
+          <label for="country">Select Country</label><br>
+          <select id="country" name="country" required>
+            <option value="">--Select--</option>
+            <option value="ke">Kenya</option>
+            <option value="us">United States</option>
+            <option value="uk">United Kingdom</option>
+            <option value="in">India</option>
+          </select><br><br>
+
+        </fieldset>
+
+        <input type="submit" value="Register">
+        <input type="reset" value="Clear Form">
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 HTML5 Academy. Built with semantic HTML5 for learning and accessibility.</p>
+  </footer>
+
+</body>
+</html>
